@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Сервис приложения
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: symfony_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - APP_ENV=dev
+      - APP_DEBUG=1
+      - DATABASE_URL=postgresql://symfony:symfony@db:5432/symfony
+    depends_on:
+      - db
+
+  # Сервис базы данных PostgreSQL
+  db:
+    image: postgres:16
+    container_name: symfony_db
+    environment:
+      POSTGRES_USER: symfony
+      POSTGRES_PASSWORD: symfony
+      POSTGRES_DB: symfony
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+# Определяем тома
+volumes:
+  db_data:
