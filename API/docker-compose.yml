@@ -17,6 +17,11 @@ services:
       - DATABASE_URL=postgresql://symfony:symfony@db:5432/symfony
     depends_on:
       - db
+    command: >
+      sh -c "
+        php bin/console doctrine:migrations:migrate --no-interaction &&
+        exec docker-php-entrypoint
+      "
 
   # Сервис базы данных PostgreSQL
   db:
