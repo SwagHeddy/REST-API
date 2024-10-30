@@ -8,11 +8,11 @@ This API позволяет управлять категориями и тов�
 
 ### Предварительные требования
 
-- [https://www.docker.com/products/docker-desktop/](Docker)
-- [https://git-scm.com/downloads/win](Git)
-- [https://getcomposer.org/Composer-Setup.exe](Composer)
-- [https://windows.php.net/download#php-8.3](PHP8+)
-- [https://symfony.com/download](SymfonyCLI) (опиционально)
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Git](https://git-scm.com/downloads/win/)
+- [Composer](https://getcomposer.org/Composer-Setup.exe)
+- [PHP 8.2+](https://windows.php.net/download#php-8.3)
+- [Symfony CLI](https://symfony.com/download) (опиционально)
 
 ### Клонирование репозитория
 
