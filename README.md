@@ -133,7 +133,9 @@ docker-compose exec php php bin/console doctrine:migrations:migrate
 curl -X GET http://localhost:8000/api/products
 ```
 
-### ![SwaggerUI](https://github.com/SwagHeddy/REST-API/blob/main/image.png)
+### SwaggerUI
+
+![SwaggerUI](https://github.com/SwagHeddy/REST-API/blob/main/image.png)
 
 ## Остановка контейнеров
 
