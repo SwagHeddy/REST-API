@@ -125,13 +125,15 @@ docker-compose exec php php bin/console doctrine:migrations:migrate
 
 ## Тестирование API
 
-Вы можете использовать такие инструменты, как [Postman](https://www.postman.com/) или [cURL](https://curl.se/), для тестирования API.
+Вы можете использовать такие инструменты, как [Postman](https://www.postman.com/) или [cURL](https://curl.se/), для тестирования API. Также в качестве тестирования доступен SwaggerUI предоставляемый ApiPlatform.
 
 ### Пример использования cURL
 
 ```bash
 curl -X GET http://localhost:8000/api/products
 ```
+
+### ![SwaggerUI](https://github.com/SwagHeddy/REST-API/blob/main/image.png)
 
 ## Остановка контейнеров
 
