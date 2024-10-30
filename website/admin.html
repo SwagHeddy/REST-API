@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-styles.css"> <!-- Подключаем отдельный файл стилей для админки -->
+    <title>Админка - Управление товарами</title>
+</head>
+<body>
+    <header>
+        <h1>Админка - Управление товарами</h1>
+        <button id="GotoMainButton">Назад к товарам</button>
+    </header>
+
+    <div class="toolbar">
+        <button id="addCategoryButton">Добавить категорию</button>
+        <button id="addProductButton">Добавить товар</button>
+        <button id="deleteCategoryButton">Удалить или обновить категорию</button>
+        <button id="deleteProductButton">Удалить или обновить</button>
+    </div>
+
+    <div id="loadingCategories" class="loading">Загрузка категорий...</div>
+    <div id="loadingProducts" class="loading">Загрузка продуктов...</div>
+
+    <div id="overlay" style="display: none;">
+        <div class="overlay-content">Загрузка...</div>
+    </div>
+
+    <div id="formContainer" style="display: none;">
+        <h2>Добавить товар</h2>
+        <input type="text" id="productName" placeholder="Имя товара" required>
+        <input type="number" id="productPrice" placeholder="Цена" required>
+        <input type="text" id="productDescription" placeholder="Описание" required>
+        <select id="categorySelect">
+            <option value="">Выберите категорию</option>
+            <!-- Категории будут загружены здесь -->
+        </select>
+        <button id="submitProductButton">Добавить</button>
+        <button id="cancelProductButton">Отмена</button>
+    </div>
+
+    <div id="productListContainer">
+        <h3>Выберите товары для удаления</h3>
+        <div id="loadingProducts" class="loading">Загрузка продуктов...</div>
+        <div id="productList">
+            <!-- Здесь будет список товаров -->
+        </div>
+        <div class="pagination">
+            <button id="backButton">Назад</button>
+            <button id="nextButton">Вперед</button>
+        </div>
+        <div class="deleteButtons">
+            <button id="confirmDeleteButton">Удалить выбранные товары</button>
+            <button id="cancelDeleteButton">Отмена</button>
+        </div>
+    </div>
+
+    <div id="addCategoryForm" style="display: none;">
+        <h4>Добавить категорию</h4>
+        <input type="text" id="categoryName" placeholder="Название категории" required />
+        <button id="submitCategoryButton">Добавить</button>
+        <button id="cancelCategoryButton">Отмена</button>
+    </div>
+
+    <div id="deleteCategoryContainer" style="display: none;">
+        <h5>Удалить категорию</h5>
+        <select id="categoryToDeleteSelect">
+            <option value="">Выберите категорию</option>
+            <!-- Здесь будут загружены категории -->
+        </select>
+        <button id="confirmDeleteCategoryButton">Удалить</button>
+        <button id="cancelDeleteCategoryButton">Отмена</button>
+    </div>
+
+        <!-- Форма для обновления товара -->
+    <div id="updateProductForm" style="display:none;">
+        <h3>Обновить товар</h3>
+        <input type="hidden" id="updateProductId"> <!-- Скрытое поле для ID товара -->
+        <input type="text" id="updateProductName" placeholder="Название товара">
+        <input type="number" id="updateProductPrice" placeholder="Цена">
+        <textarea id="updateProductDescription" placeholder="Описание"></textarea>
+        <select id="updateCategorySelect"></select>
+        <button id="submitUpdateProductButton">Обновить товар</button>
+        <button id="cancelUpdateProductButton">Отмена</button>
+    </div>
+
+    <!-- Форма для обновления категории -->
+    <div id="updateCategoryForm" style="display:none;">
+        <h3>Обновить категорию</h3>
+        <input type="hidden" id="updateCategoryId"> <!-- Скрытое поле для ID категории -->
+        <input type="text" id="updateCategoryName" placeholder="Название категории">
+        <button id="submitUpdateCategoryButton">Обновить категорию</button>
+        <button id="cancelUpdateCategoryButton">Отмена</button>
+    </div>
+
+    <footer>
+        <p>© 2024 Магазин техники</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

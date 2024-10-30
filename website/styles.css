@@ -1,0 +1,98 @@
+/* Общие стили для страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif; /* Используем современный шрифт */
+    background-color: #f4f4f4; /* Светлый фон для всего сайта */
+    color: #333; /* Темный цвет текста */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+
+/* Стили для шапки */
+header {
+    background-color: #2c3e50; /* Темный фон для шапки */
+    color: #ffffff; /* Белый цвет текста */
+    padding: 20px;
+    text-align: center; /* Центрируем текст */
+}
+
+h1 {
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для выпадающего списка категорий */
+#categorySelect {
+    margin-top: 10px; /* Отступ сверху */
+    padding: 10px; /* Отступ внутри элемента */
+    border-radius: 5px; /* Скругление углов */
+    border: 1px solid #ccc; /* Граница */
+    background-color: #ffffff; /* Фон выпадающего списка */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: white; /* Белый цвет текста на кнопке */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
+    cursor: pointer; /* Указатель на кнопку */
+    margin: 5px; /* Отступ между кнопками */
+    transition: background-color 0.3s; /* Плавная анимация цвета кнопки */
+}
+
+button:hover {
+    background-color: #0056b3; /* Темнее при наведении */
+}
+
+/* Анимация загрузки */
+.loading {
+    display: none; /* Изначально скрыт */
+    position: absolute; /* Фиксированное положение */
+    top: 50%; /* Середина по вертикали */
+    left: 50%; /* Середина по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование элемента */
+    font-size: 24px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    z-index: 1000; /* Убедитесь, что загрузка сверху остальных элементов */
+}
+
+/* Стили для списка продуктов */
+.product-list {
+    display: flex; /* Используем flexbox для размещения карточек */
+    flex-direction: column; /* Размещаем карточки в столбик */
+    align-items: center; /* Центрируем карточки */
+    gap: 20px; /* Промежутки между карточками */
+    margin: 20px; /* Отступы вокруг списка */
+    flex: 1;
+}
+
+/* Стиль для каждой карточки продукта */
+.product {
+    background-color: #ffffff; /* Белый фон для карточек */
+    border: 1px solid #ddd; /* Светлая граница */
+    border-radius: 10px; /* Скругление углов карточек */
+    padding: 20px; /* Отступ внутри карточек */
+    width: 300px; /* Ширина карточки */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для карточек */
+    transition: transform 0.2s; /* Анимация при наведении */
+    text-align: center; /* Центрируем текст внутри карточки */
+}
+
+/* Пагинация */
+.pagination {
+    text-align: center; /* Центрируем элементы пагинации */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50; /* Темный фон для подвала */
+    color: #ffffff; /* Белый цвет текста */
+    width: 100%; /* Ширина 100% */
+    position: relative; /* Обеспечиваем правильное расположение */
+}
